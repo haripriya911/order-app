@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header';
 import Meals from './Meals/Meals';
 import Cart from './CartIcon/Cart';
+import CardProvider from './Store/CardProvider';
 
 function App() {
   const [cartIsShown,setCartIsShown]=useState(false);
@@ -14,16 +15,16 @@ function App() {
   }
 
   return (
-    <div >
-      
+  
+      <CardProvider>
      {  cartIsShown && <Cart onHideHandler={hideCartHandler}/>}
       <Header onShownHandler={showCartHandler}/>
       
       <Meals></Meals>
       
-      
-      
-    </div>
+    
+      </CardProvider>
+    
   );
 }
 
