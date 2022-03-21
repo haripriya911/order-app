@@ -7,15 +7,17 @@ const defaultCartState={
 }
 const cartReducer=(state,action)=>{
     if(action.type==='ADD'){
+        const updatedTotalAmount=state.totalAmount+(action.item.price* action.item.Amount);
+        
         const updatedItems= state.items.concat(action.item);
-        const updatedTotalAmount=state.totalAmount+action.item.price* action.item.Amount
+        
     
     return{
         items :updatedItems,
         totalAmount:updatedTotalAmount
-    }
+    };
 
-}
+    }
 return defaultCartState;
 };
 const CardProvider=(props)=>{
@@ -38,4 +40,5 @@ const CardProvider=(props)=>{
         </CardContext.Provider>
     )
 }
+
 export default CardProvider;

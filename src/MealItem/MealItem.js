@@ -4,10 +4,10 @@ import classes from "./MealItem.module.css";
 import CardContext from "../Store/Card-Context";
 
 const MealItem=(props)=>{
-    const conCtx=useContext(CardContext)
+    const cardCtx=useContext(CardContext)
     const price=`$ ${props.price}`;
     const addToCartHandler=amount=>{
-        conCtx.addItem({
+        cardCtx.addItem({
             id:props.id,
             name:props.name,
             amount:amount,
