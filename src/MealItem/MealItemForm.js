@@ -9,8 +9,8 @@ const MealItemForm = (props) => {
     const enteredAmount=amountInputRef.current.value;
     const enteredAmountNumber=+enteredAmount;
     if(enteredAmount.trim().length===0||
-    enteredAmount<1||
-    enteredAmount>5){
+    enteredAmountNumber<1||
+    enteredAmountNumber>5){
       setValidItem(false)
       return;
     }
@@ -24,7 +24,7 @@ const MealItemForm = (props) => {
           label="Amount"
           input={{
             id: "Amount",
-            type: "Number",
+            type: 'Number',
             min: '1',
             max: '5',
             step: '1',
