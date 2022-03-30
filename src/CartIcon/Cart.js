@@ -10,7 +10,8 @@ const Cart = (props) => {
   
   const hasItems=cardCtx.items.length>0;
   const cartItemRemove=id=>{
-    cardCtx.removeItem({...id,amount:1});
+    console.log(id,"id");
+    cardCtx.removeItem(id);
   };
   const cartItemAdd=item=>{
     cardCtx.addItem({...item,amount:1});
