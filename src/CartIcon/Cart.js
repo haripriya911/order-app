@@ -43,7 +43,7 @@ const Cart = (props) => {
       </div>
       <div className={classes.actions}>
         <button className={classes["button--alt"]} onClick={props.onHideHandler}>Close</button>
-       { hasItems&&<button className={classes.button}>Order</button>}
+       { hasItems&&<button className={classes.button } onClick={()=>alert("thanks for your order")} >Order</button>}
       </div>
     </Modal>
     

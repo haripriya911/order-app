@@ -5,6 +5,7 @@ import Meals from './Meals/Meals';
 import Cart from './CartIcon/Cart';
 import CardProvider from './Store/CardProvider';
 
+
 function App() {
   const [cartIsShown,setCartIsShown]=useState(false);
   const showCartHandler=()=>{
@@ -21,9 +22,9 @@ function App() {
       <Header onShownHandler={showCartHandler}/>
       
       <Meals></Meals>
-      
     
       </CardProvider>
+
     
   );
 }
